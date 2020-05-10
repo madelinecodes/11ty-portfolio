@@ -1,0 +1,60 @@
+<header class="[ intro ] [ pad-top-900 pad-bottom-max ]">
+  <div class="[ inner-wrapper ] [ sf-flow ]">
+    <div class="avatar-con">
+      {% if weAreHome === true %}
+        <img class="avatar" src="/images/avatars/avatar01.jpg" alt="Me!" loading="lazy" width="343" height="343">
+      {% endif %}
+      <h1 class="[ intro__heading{{ ' intro__heading--compact' if page.url === '/' }} ] [ text-800 md:text-900 leading-tight ] [ p-name ]">{{ introHeading }}</h1>
+    </div>
+    {% if introSummary %}
+      <div class="[ intro__summary ] [ sf-flow ] [ leading-mid measure-short ]">{{ introSummary | safe }}</div>
+    {% endif %}
+
+    {% if weAreHome === true %}
+      <style>
+        .avatar {
+          max-width: 160px;
+          max-height: 160px;
+          margin-right: 22px;
+        }
+
+        .avatar-con {
+          display: flex;
+        }
+
+        @media only screen and (max-width: 500px) {
+          .avatar-con {
+            flex-direction: column;
+          }
+          .avatar {
+            max-width: 100%;
+            max-height: 100%;
+            margin-bottom: 22px;
+          }
+        }
+      </style>
+
+      <script>
+        let i = 0;
+        const images = [
+          '/images/avatars/avatar01.jpg',
+          '/images/avatars/avatar02.jpg',
+          '/images/avatars/avatar03.jpg',
+          '/images/avatars/avatar04.jpg',
+          '/images/avatars/avatar05.jpg',
+          '/images/avatars/avatar06.jpg',
+          '/images/avatars/avatar07.png'
+        ]
+        const img = document.querySelector('[alt="Me!"]');
+        const next = img.src;
+        setInterval(() => {
+          i === images.length - 1
+            ? i = 0
+            : i++;
+          img.src = images[i];
+        }, 3500);
+      </script>
+    {% endif %}
+
+  </div>
+</header>

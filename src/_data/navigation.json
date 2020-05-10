@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "text": "Projects",
+      "url": "/projects",
+      "external": false
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/madelinecodes",
+      "external": true
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/madelinecodes",
+      "external": true
+    },
+    {
+      "text": "Email",
+      "url": "mailto:madelinemhealey@gmail.com",
+      "external": true
+    },
+    {
+      "text": "Contact",
+      "url": "/contact",
+      "external": false
+    }
+  ]
+}
